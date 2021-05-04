@@ -1,0 +1,1 @@
+FROM tensorflow/serving:2.2.2-gpu
