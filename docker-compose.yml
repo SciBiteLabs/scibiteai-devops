@@ -1,12 +1,13 @@
 version: '3'
 services:
+
   scibite-ai:
     container_name: scibite-ai
-    image: scibite/scibiteai:latest
+    image: scibite/scibiteai-dev:2.0-rc
     ports:
       - 8000:8000
     volumes:
-      - ./models:/models
+      - ./models:/SciBiteAI
 
   tf-serving:
     container_name: tf-serving
@@ -17,12 +18,12 @@ services:
       - 8500:8500
       - 8501:8501
     volumes:
-      - ./models/:/models/
+      - ./models:/SciBiteAI
     command:
-      - '--model_config_file=/models/model_config.config'
+      - '--model_config_file=/SciBiteAI/model_config.config'
       - '--model_config_file_poll_wait_seconds=-1'
       - '--enable_batching=true'
-      - '--batching_parameters_file=/models/batch_params.pb'
+      - '--batching_parameters_file=/SciBiteAI/batch_params.pb'
 
   redis:
     container_name: redis-db
@@ -40,4 +41,4 @@ services:
       dockerfile: ./config/cron.Dockerfile
     volumes:
       - ./models/:/models/
-    entrypoint: /entrypoint.sh
+
