@@ -36,7 +36,7 @@ ___
 
 To build all of the required Docker services using docker-compose, execute the following from the root of this repository: 
 ```bash
-$ docker-compose up --build .
+$ docker-compose up --build
 ```
 
 ### REST API
