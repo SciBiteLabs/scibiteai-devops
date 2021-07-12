@@ -11,9 +11,7 @@ services:
 
   tf-serving:
     container_name: tf-serving
-    build:
-      context: ./
-      dockerfile: ./config/tfserving.Dockerfile
+    image: scibite/scibiteai-serving:latest
     ports:
       - 8500:8500
       - 8501:8501

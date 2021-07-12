@@ -3,7 +3,8 @@ import os
 import shutil
 import time
 
-from scinapse_api.config.const import TEMP_STORAGE
+MODELS_FOLDER = "/models" if os.getenv("DOCKERISED") else "../../models"
+TEMP_STORAGE = f"{MODELS_FOLDER}/temp_storage"
 
 
 def main():
