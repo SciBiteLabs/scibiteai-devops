@@ -3,7 +3,7 @@ services:
 
   scibite-ai:
     container_name: scibite-ai
-    image: scibite/scibiteai-dev:2.0-rc
+    image: scibite/scibiteai:latest
     ports:
       - 8000:8000
     volumes:
