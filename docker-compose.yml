@@ -32,11 +32,4 @@ services:
       - ./config/redis.conf:/redis.conf
     command: ["redis-server", "/redis.conf"]
 
-  cron-runner:
-    container_name: cron-runner
-    build:
-      context: ./
-      dockerfile: ./config/cron.Dockerfile
-    volumes:
-      - ./models/:/models/
 
