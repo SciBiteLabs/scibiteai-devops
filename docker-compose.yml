@@ -3,7 +3,7 @@ services:
 
   scibite-ai:
     container_name: scibite-ai
-    image: scibite/scibiteai:latest
+    image: scibite/scibiteai-dev
     ports:
       - 8000:8000
     volumes:
@@ -11,7 +11,7 @@ services:
 
   tf-serving:
     container_name: tf-serving
-    image: scibite/scibiteai-serving:latest
+    image: scibite/scibiteai-serving-dev
     ports:
       - 8500:8500
       - 8501:8501
