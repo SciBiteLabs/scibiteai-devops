@@ -63,5 +63,6 @@ ___
 | 1.0.7      | Fixed hanging UI bug for RE endpoints + other minor bug fixes |
 | 1.1        | Jenkins CI pipeline in place |
 | 2.0        | Large refactor and change of backend architecture |
+| 2.1        | Question answering functionality incorporated into new architecture |
 
 
