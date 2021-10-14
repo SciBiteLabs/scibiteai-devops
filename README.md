@@ -22,7 +22,7 @@ tested with [docker](https://docs.docker.com/engine/install/) **19.03.4-ce**
 and docker compose [docker-compose](https://docs.docker.com/compose/install/) **1.24.1**. But is very likely it will work 
 also with older/newer versions.
 
-**You also need a valid SciBiteAI license.**
+**You also need a valid SciBiteAI license. This should be placed in the 'models' folder of this directory.**
 
 ### Models
 All models for use within SciBiteAI need to be placed in the relevant sub-directory (e.g. [ner_models](/models/ner_models) for an NER type model) of the [/models](/models) folder in the root of the repo.
